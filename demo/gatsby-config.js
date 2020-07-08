@@ -26,12 +26,20 @@ module.exports = {
 
         navigation: [
           {
+            title: `Theme Preview`,
+            slug: `/theme-preview`,
+          },
+          {
             title: `Blog`,
             slug: `/blog`,
           },
           {
             title: `About`,
             slug: `/about`,
+          },
+          {
+            title: `404`,
+            slug: `/404`,
           },
         ],
         externalLinks: [
