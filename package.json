@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "name": "@shetharp/gatsby-theme-polaroid-workspace",
+  "author": "Arpit Sheth <arpit@arpitsheth.com> (@shetharp)",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "workspaces": [
+    "theme",
+    "demo"
+  ],
+  "scripts": {
+    "build": "yarn workspace example build"
+  }
+}
