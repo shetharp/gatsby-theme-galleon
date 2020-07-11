@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     // Used for the title template on pages other than the index site
-    siteTitle: `Polaroid`,
+    siteTitle: `Galleon`,
     // Default title of the page
     siteTitleAlt: `Site Title Alt`, // TODO
     // Can be used for e.g. JSONLD
@@ -19,7 +19,7 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `@shetharp/gatsby-theme-polaroid`,
+      resolve: `@shetharp/gatsby-theme-galleon`,
       options: {
         // TODO -- Add more options if needed
         // https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-minimal-blog#theme-options

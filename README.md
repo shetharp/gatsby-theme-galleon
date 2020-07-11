@@ -1,1 +1,1 @@
-# gatsby-theme-polaroid-workspace
+# gatsby-theme-galleon-workspace

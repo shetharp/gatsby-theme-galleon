@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@shetharp/gatsby-theme-polaroid-workspace",
+  "name": "@shetharp/gatsby-starter-child-theme-workspace",
   "author": "Arpit Sheth <arpit@arpitsheth.com> (@shetharp)",
   "version": "0.1.0",
   "main": "index.js",
