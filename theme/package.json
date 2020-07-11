@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/shetharp/gatsby-theme-candor.git"
+    "url": "https://github.com/shetharp/gatsby-theme-polaroid.git"
   },
   "peerDependencies": {
     "gatsby": "^2.6.0"
