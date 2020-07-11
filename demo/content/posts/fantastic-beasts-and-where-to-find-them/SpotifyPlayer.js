@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint react/no-unknown-property: 0 */
 /* eslint react/prefer-stateless-function: 0 */
 

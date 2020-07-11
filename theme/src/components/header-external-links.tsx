@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /** @jsx jsx */
-import React from "react"
-import { jsx, Link as TLink } from "theme-ui"
-import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
+import React from "react";
+import { jsx, Link as TLink } from "theme-ui";
+import useMinimalBlogConfig from "../hooks/use-minimal-blog-config";
 
 const HeaderExternalLinks = () => {
-  const { externalLinks } = useMinimalBlogConfig()
+  const { externalLinks } = useMinimalBlogConfig();
 
   return (
     <React.Fragment>
@@ -18,7 +19,7 @@ const HeaderExternalLinks = () => {
         </div>
       )}
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default HeaderExternalLinks
+export default HeaderExternalLinks;

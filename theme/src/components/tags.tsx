@@ -1,22 +1,24 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /** @jsx jsx */
-import { jsx, Link as TLink, Heading } from "theme-ui"
-import { Box, Flex } from "@theme-ui/components"
-import kebabCase from "lodash.kebabcase"
-import { Link } from "gatsby"
-import Layout from "./layout"
-import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
-import SEO from "./seo"
-import replaceSlashes from "../utils/replaceSlashes"
+import { jsx, Link as TLink, Heading } from "theme-ui";
+import { Box, Flex } from "@theme-ui/components";
+import kebabCase from "lodash.kebabcase";
+import { Link } from "gatsby";
+import Layout from "./layout";
+import useMinimalBlogConfig from "../hooks/use-minimal-blog-config";
+import SEO from "./seo";
+import replaceSlashes from "../utils/replaceSlashes";
 
 type PostsProps = {
   list: {
-    fieldValue: string
-    totalCount: number
-  }[]
-}
+    fieldValue: string;
+    totalCount: number;
+  }[];
+};
 
 const Tags = ({ list }: PostsProps) => {
-  const { tagsPath, basePath } = useMinimalBlogConfig()
+  const { tagsPath, basePath } = useMinimalBlogConfig();
 
   return (
     <Layout>
@@ -28,6 +30,7 @@ const Tags = ({ list }: PostsProps) => {
             <TLink
               as={Link}
               sx={{ variant: `links.listItem`, mr: 2 }}
+              // @ts-ignore
               to={replaceSlashes(`/${basePath}/${tagsPath}/${kebabCase(listItem.fieldValue)}`)}
             >
               {listItem.fieldValue} <span sx={{ color: `secondary` }}>({listItem.totalCount})</span>
@@ -36,7 +39,7 @@ const Tags = ({ list }: PostsProps) => {
         ))}
       </Box>
     </Layout>
-  )
-}
+  );
+};
 
-export default Tags
+export default Tags;

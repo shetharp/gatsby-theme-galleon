@@ -1,18 +1,19 @@
-import React from "react"
-import { Helmet } from "react-helmet"
-import { withPrefix } from "gatsby"
-import useSiteMetadata from "../hooks/use-site-metadata"
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+import React from "react";
+import { Helmet } from "react-helmet";
+import { withPrefix } from "gatsby";
+import useSiteMetadata from "../hooks/use-site-metadata";
 
 type SEOProps = {
-  title?: string
-  description?: string
-  pathname?: string
-  image?: string
-  children?: React.ReactNode
-}
+  title?: string;
+  description?: string;
+  pathname?: string;
+  image?: string;
+  children?: React.ReactNode;
+};
 
 const SEO = ({ title = ``, description = ``, pathname = ``, image = ``, children = null }: SEOProps) => {
-  const site = useSiteMetadata()
+  const site = useSiteMetadata();
 
   const {
     siteTitle,
@@ -22,14 +23,14 @@ const SEO = ({ title = ``, description = ``, pathname = ``, image = ``, children
     siteLanguage,
     siteImage: defaultImage,
     author,
-  } = site
+  } = site;
 
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
     url: `${siteUrl}${pathname || ``}`,
     image: `${siteUrl}${image || defaultImage}`,
-  }
+  };
   return (
     <Helmet title={title} defaultTitle={defaultTitle} titleTemplate={`%s | ${siteTitle}`}>
       <html lang={siteLanguage} />
@@ -54,7 +55,7 @@ const SEO = ({ title = ``, description = ``, pathname = ``, image = ``, children
       <link rel="apple-touch-icon" sizes="180x180" href={withPrefix(`/apple-touch-icon.png`)} />
       {children}
     </Helmet>
-  )
-}
+  );
+};
 
-export default SEO
+export default SEO;

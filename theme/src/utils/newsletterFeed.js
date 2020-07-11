@@ -24,8 +24,8 @@ module.exports = (title) => ({
             url: site.siteMetadata.siteUrl + post.slug,
             guid: site.siteMetadata.siteUrl + post.slug,
             custom_elements: [{ "content:encoded": post.html }],
-          }
-        })
+          };
+        });
       },
       query: `
         {
@@ -44,4 +44,4 @@ module.exports = (title) => ({
       title,
     },
   ],
-})
+});

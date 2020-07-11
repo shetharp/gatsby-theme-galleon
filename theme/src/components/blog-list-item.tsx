@@ -1,28 +1,30 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /** @jsx jsx */
-import React from "react"
-import { jsx, Link as TLink } from "theme-ui"
-import { Box } from "@theme-ui/components"
-import { Link } from "gatsby"
-import ItemTags from "./item-tags"
+import React from "react";
+import { jsx, Link as TLink } from "theme-ui";
+import { Box } from "@theme-ui/components";
+import { Link } from "gatsby";
+import ItemTags from "./item-tags";
 
 type BlogListItemProps = {
   post: {
-    slug: string
-    title: string
-    date: string
-    excerpt: string
-    description: string
-    timeToRead?: number
+    slug: string;
+    title: string;
+    date: string;
+    excerpt: string;
+    description: string;
+    timeToRead?: number;
     tags?: {
-      name: string
-      slug: string
-    }[]
-  }
-  showTags?: boolean
-}
+      name: string;
+      slug: string;
+    }[];
+  };
+  showTags?: boolean;
+};
 
 const BlogListItem = ({ post, showTags = true }: BlogListItemProps) => (
   <Box mb={4}>
+    {/* @ts-ignore */}
     <TLink as={Link} to={post.slug} sx={{ fontSize: [1, 2, 3], color: `text` }}>
       {post.title}
     </TLink>
@@ -36,6 +38,6 @@ const BlogListItem = ({ post, showTags = true }: BlogListItemProps) => (
       )}
     </p>
   </Box>
-)
+);
 
-export default BlogListItem
+export default BlogListItem;

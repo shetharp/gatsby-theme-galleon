@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /** @jsx jsx */
-import { jsx, Link } from "theme-ui"
-import useSiteMetadata from "../hooks/use-site-metadata"
+import { jsx, Link } from "theme-ui";
+import useSiteMetadata from "../hooks/use-site-metadata";
 
 const Footer = () => {
-  const { siteTitle } = useSiteMetadata()
+  const { siteTitle } = useSiteMetadata();
 
   return (
     <footer
@@ -38,7 +39,7 @@ const Footer = () => {
         </Link>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

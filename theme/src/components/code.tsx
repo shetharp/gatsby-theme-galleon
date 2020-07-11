@@ -1,53 +1,52 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint react/destructuring-assignment: 0 */
-import React from "react"
-import Highlight, { defaultProps } from "prism-react-renderer"
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live"
-import theme from "prism-react-renderer/themes/nightOwl"
-import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
-import { Language } from "../types"
+// @ts-nocheck
+import React from "react";
+import Highlight, { defaultProps } from "prism-react-renderer";
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
+import theme from "prism-react-renderer/themes/nightOwl";
+import useMinimalBlogConfig from "../hooks/use-minimal-blog-config";
+import { Language } from "../types";
 
 type CodeProps = {
-  codeString: string
-  language: Language
-  noLineNumbers?: boolean
-  metastring?: string
-  [key: string]: any
-}
+  codeString: string;
+  language: Language;
+  noLineNumbers?: boolean;
+  metastring?: string;
+  [key: string]: any;
+};
 
 function getParams(className = ``) {
-  const [lang = ``, params = ``] = className.split(`:`)
-
-  return [
-    // @ts-ignore
-    lang.split(`language-`).pop().split(`{`).shift(),
-  ].concat(
-    // @ts-ignore
+  const [lang = ``, params = ``] = className.split(`:`);
+  return [lang.split(`language-`).pop().split(`{`).shift()].concat(
     params.split(`&`).reduce((merged, param) => {
-      const [key, value] = param.split(`=`)
-      // @ts-ignore
-      merged[key] = value
-      return merged
+      const [key, value] = param.split(`=`);
+      merged[key] = value;
+      return merged;
     }, {})
-  )
+  );
 }
 
-const RE = /{([\d,-]+)}/
+const RE = /{([\d,-]+)}/;
 
 const calculateLinesToHighlight = (meta: string) => {
   if (!RE.test(meta)) {
-    return () => false
+    return () => false;
   }
   const lineNumbers = RE.exec(meta)![1]
     .split(`,`)
-    .map((v) => v.split(`-`).map((x) => parseInt(x, 10)))
+    .map((v) => v.split(`-`).map((x) => parseInt(x, 10)));
   return (index: number) => {
-    const lineNumber = index + 1
+    const lineNumber = index + 1;
     const inRange = lineNumbers.some(([start, end]) =>
       end ? lineNumber >= start && lineNumber <= end : lineNumber === start
-    )
-    return inRange
-  }
-}
+    );
+    return inRange;
+  };
+};
 
 const Code = ({
   codeString,
@@ -56,12 +55,12 @@ const Code = ({
   metastring = ``,
   ...props
 }: CodeProps) => {
-  const { showLineNumbers } = useMinimalBlogConfig()
+  const { showLineNumbers } = useMinimalBlogConfig();
 
-  const [language, { title = `` }] = getParams(blockClassName)
-  const shouldHighlightLine = calculateLinesToHighlight(metastring)
+  const [language, { title = `` }] = getParams(blockClassName);
+  const shouldHighlightLine = calculateLinesToHighlight(metastring);
 
-  const hasLineNumbers = !noLineNumbers && language !== `noLineNumbers` && showLineNumbers
+  const hasLineNumbers = !noLineNumbers && language !== `noLineNumbers` && showLineNumbers;
 
   if (props[`react-live`]) {
     return (
@@ -70,7 +69,7 @@ const Code = ({
         <LiveError />
         <LivePreview data-name="live-preview" />
       </LiveProvider>
-    )
+    );
   }
   return (
     <Highlight {...defaultProps} code={codeString} language={language} theme={theme}>
@@ -84,27 +83,29 @@ const Code = ({
           <div className="gatsby-highlight" data-language={language}>
             <pre className={className} style={style} data-linenumber={hasLineNumbers}>
               {tokens.map((line, i) => {
-                const lineProps = getLineProps({ line, key: i })
+                const lineProps = getLineProps({ line, key: i });
 
                 if (shouldHighlightLine(i)) {
-                  lineProps.className = `${lineProps.className} highlight-line`
+                  lineProps.className = `${lineProps.className} highlight-line`;
                 }
 
                 return (
+                  // eslint-disable-next-line react/jsx-key
                   <div {...lineProps}>
                     {hasLineNumbers && <span className="line-number-style">{i + 1}</span>}
                     {line.map((token, key) => (
+                      // eslint-disable-next-line react/jsx-key
                       <span {...getTokenProps({ token, key })} />
                     ))}
                   </div>
-                )
+                );
               })}
             </pre>
           </div>
         </React.Fragment>
       )}
     </Highlight>
-  )
-}
+  );
+};
 
-export default Code
+export default Code;

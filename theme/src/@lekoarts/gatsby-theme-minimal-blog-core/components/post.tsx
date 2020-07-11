@@ -1,15 +1,17 @@
-import React from "react"
-import Post from "../../../components/post"
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React from "react";
+import Post from "../../../components/post";
 
 type Props = {
   data: {
-    post: any
-    [key: string]: any
-  }
-}
+    post: any;
+    [key: string]: any;
+  };
+};
 
 export default function MinimalBlogCorePost({ data }: Props) {
-  const { post } = data
+  const { post } = data;
 
-  return <Post data={{ ...data, post }} />
+  return <Post data={{ ...data, post }} />;
 }

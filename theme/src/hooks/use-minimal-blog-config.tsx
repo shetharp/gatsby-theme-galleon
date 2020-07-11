@@ -1,23 +1,24 @@
-import { graphql, useStaticQuery } from "gatsby"
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+import { graphql, useStaticQuery } from "gatsby";
 
 type UseMinimalBlogConfigProps = {
   minimalBlogConfig: {
-    basePath: string
-    blogPath: string
-    postsPath: string
-    pagesPath: string
-    tagsPath: string
+    basePath: string;
+    blogPath: string;
+    postsPath: string;
+    pagesPath: string;
+    tagsPath: string;
     externalLinks: {
-      name: string
-      url: string
-    }[]
+      name: string;
+      url: string;
+    }[];
     navigation: {
-      title: string
-      slug: string
-    }[]
-    showLineNumbers: boolean
-  }
-}
+      title: string;
+      slug: string;
+    }[];
+    showLineNumbers: boolean;
+  };
+};
 
 const useMinimalBlogConfig = () => {
   const data = useStaticQuery<UseMinimalBlogConfigProps>(graphql`
@@ -39,9 +40,9 @@ const useMinimalBlogConfig = () => {
         showLineNumbers
       }
     }
-  `)
+  `);
 
-  return data.minimalBlogConfig
-}
+  return data.minimalBlogConfig;
+};
 
-export default useMinimalBlogConfig
+export default useMinimalBlogConfig;

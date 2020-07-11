@@ -1,14 +1,16 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /** @jsx jsx */
-import React from "react"
-import { jsx } from "theme-ui"
-import { Box } from "@theme-ui/components"
+import React from "react";
+import { jsx } from "theme-ui";
+import { Box } from "@theme-ui/components";
 
 type TitleProps = {
-  children: React.ReactNode
-  as?: string
-  className?: string
-  text: string
-}
+  children: React.ReactNode;
+  as?: string;
+  className?: string;
+  text: string;
+};
 
 const Title = ({ text, children, as = `h2`, className = `` }: TitleProps) => (
   <div
@@ -26,6 +28,7 @@ const Title = ({ text, children, as = `h2`, className = `` }: TitleProps) => (
     }}
   >
     <Box
+      // @ts-ignore
       as={as}
       sx={{ fontWeight: `medium`, fontSize: [3, 4], fontFamily: `heading`, lineHeight: `heading`, color: `heading` }}
       className={className}
@@ -43,6 +46,6 @@ const Title = ({ text, children, as = `h2`, className = `` }: TitleProps) => (
       {children}
     </div>
   </div>
-)
+);
 
-export default Title
+export default Title;
