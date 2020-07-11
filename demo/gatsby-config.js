@@ -86,12 +86,12 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ['DM Mono:400,400i,700,700i']
-        }
-      }
-    }
+          families: ["DM Mono:400,400i,700,700i"],
+        },
+      },
+    },
   ],
-}
+};

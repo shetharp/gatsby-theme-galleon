@@ -25,9 +25,7 @@ const breakpointsDict = {
   laptopL: "1600px", // breakpoints[8]
 };
 
-const breakpoints: ThemePolaroid["breakpoints"] = Object.values(
-  breakpointsDict
-);
+const breakpoints: ThemePolaroid["breakpoints"] = Object.values(breakpointsDict);
 
 // ==================================================
 // Theme scale > Colors
@@ -67,24 +65,11 @@ const colors: ThemePolaroid["colors"] = {
 const fonts: ThemePolaroid["fonts"] = {
   body:
     '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
-  heading:
-    'SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
-  monospace:
-    'SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+  heading: 'SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+  monospace: 'SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
 };
 
-const fontSizes: ThemePolaroid["fontSizes"] = [
-  16,
-  18,
-  20,
-  24,
-  28,
-  32,
-  40,
-  48,
-  60,
-  72,
-];
+const fontSizes: ThemePolaroid["fontSizes"] = [16, 18, 20, 24, 28, 32, 40, 48, 60, 72];
 
 const fontWeights: ThemePolaroid["fontWeights"] = {
   body: 300,
@@ -288,13 +273,7 @@ const layout: ThemePolaroid["layout"] = {
     // borderWidth: "md",
     // borderStyle: ["solid", "solid", "dashed", "dotted", "solid", "dashed", "dotted", "solid", "dashed", "dotted"],
     // borderColor: ["primary", "accent", null, null, "highlight", null, null, "muted"],
-    width: [
-      `calc(100% - ${space[2]})`,
-      null,
-      null,
-      null,
-      `calc(100% - ${space[3]})`,
-    ],
+    width: [`calc(100% - ${space[2]})`, null, null, null, `calc(100% - ${space[3]})`],
     maxWidth: "tabletS",
   },
 };
