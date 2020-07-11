@@ -52,6 +52,8 @@ module.exports = {
             url: `https://www.instagram.com/shetharp/`,
           },
         ],
+        feed: true,
+        feedTitle: "TODO Feed Title",
       },
     },
     {
