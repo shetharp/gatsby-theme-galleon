@@ -9,9 +9,24 @@
     "url": "https://github.com/gatsbyjs/gatsby-starter-theme-workspace.git"
   },
   "peerDependencies": {
-    "gatsby": "^2.6.0"
+    "gatsby": "^2.6.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "dependencies": {
-    "@lekoarts/gatsby-theme-minimal-blog": "^2.3.12"
+    "@lekoarts/gatsby-theme-minimal-blog-core": "^2.3.10",
+    "@theme-ui/color": "^0.3.1",
+    "@theme-ui/components": "^0.3.1",
+    "@theme-ui/presets": "^0.3.0",
+    "gatsby-plugin-catch-links": "^2.3.11",
+    "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-plugin-theme-ui": "^0.3.0",
+    "lodash.kebabcase": "^4.1.1",
+    "mdx-utils": "^0.2.0",
+    "prism-react-renderer": "^1.1.1",
+    "react-helmet": "^6.1.0",
+    "react-live": "^2.2.2",
+    "theme-ui": "^0.3.1",
+    "typeface-ibm-plex-sans": "^0.0.75"
   }
 }
