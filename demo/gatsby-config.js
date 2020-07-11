@@ -1,29 +1,31 @@
 module.exports = {
+  // TODO - Update site metadata to reflect your site's info
   siteMetadata: {
     // Used for the title template on pages other than the index site
     siteTitle: `Galleon`,
     // Default title of the page
-    siteTitleAlt: `Site Title Alt`, // TODO
+    siteTitleAlt: `Site Title Alt`,
     // Can be used for e.g. JSONLD
-    siteHeadline: `Site Headline`, // TODO
+    siteHeadline: `Site Headline`,
     // Will be used to generate absolute URLs for og:image etc.
     siteUrl: `https://arpitsheth.com`,
     // Used for SEO
-    siteDescription: `Site description`, // TODO
+    siteDescription: `Site description`,
     // Will be set on the <html /> tag
     siteLanguage: `en`,
     // Used for og:image and must be placed inside the `static` folder
-    siteImage: `/banner.jpg`, // TODO
+    siteImage: `/banner.jpg`,
     // Twitter Handle
-    author: `@shetharp`, // TODO
+    author: `@shetharp`,
   },
   plugins: [
     {
       resolve: `@shetharp/gatsby-theme-galleon`,
       options: {
-        // TODO -- Add more options if needed
+        // TODO - Add more options if needed
         // https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-minimal-blog#theme-options
 
+        // TODO - Update navigation items for your site
         navigation: [
           {
             title: `Theme Preview`,
@@ -42,6 +44,8 @@ module.exports = {
             slug: `/404`,
           },
         ],
+
+        // TODO - Update external links for your site
         externalLinks: [
           {
             name: `Twitter`,
@@ -53,25 +57,26 @@ module.exports = {
           },
         ],
         feed: true,
-        feedTitle: "TODO Feed Title",
+        feedTitle: "TODO Feed Title", // TODO - Update RSS feed title for your site
       },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID, // TODO
+        trackingId: process.env.GOOGLE_ANALYTICS_ID, // TODO - Configure Google Analytics for your site
       },
     },
     `gatsby-plugin-sitemap`,
     {
+      // TODO - Update manifest options for your site
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Manifest Name`, // TODO
-        short_name: `short-name`, // TODO
-        description: `Manifest description`, // TODO
+        name: `Manifest Name`,
+        short_name: `short-name`,
+        description: `Manifest description`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#6B46C1`, // TODO -- should ideally pull from theme
+        theme_color: `#6B46C1`,
         display: `standalone`,
         icons: [
           {
@@ -88,6 +93,9 @@ module.exports = {
       },
     },
     {
+      // TODO - Update webfonts for your site.
+      // Alternatively, you can install Google Fonts as npm packages with the Typefaces Project
+      // Learn more: https://github.com/KyleAMathews/typefaces
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
