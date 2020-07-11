@@ -17,9 +17,6 @@ export const themeSite = merge(themePolaroid, {
   // https://theme-ui.com/packages/gatsby-theme-ui-blog/#theming
   // ==================================================
   // TODO
-  colors: {
-    primary: "mediumvioletred",
-  },
   fonts,
 });
 export default themeSite;
