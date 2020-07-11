@@ -85,6 +85,13 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['DM Mono:400,400i,700,700i']
+        }
+      }
+    }
   ],
 }
