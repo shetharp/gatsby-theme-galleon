@@ -8,6 +8,14 @@
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-theme-workspace.git"
   },
+  "keywords": [
+    "gatsby",
+    "gatsby-theme",
+    "gatsby-plugin",
+    "typescript",
+    "mdx",
+    "theme-ui"
+  ],
   "peerDependencies": {
     "gatsby": "^2.6.0",
     "react": "^16.13.1",
@@ -31,7 +39,6 @@
   },
   "devDependencies": {
     "@types/lodash.kebabcase": "^4.1.6",
-    "@types/react-helmet": "^6.0.0",
-    "@types/theme-ui__color": "^0.3.2"
+    "@types/react-helmet": "^6.0.0"
   }
 }

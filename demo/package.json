@@ -7,7 +7,9 @@
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
-    "build": "gatsby build"
+    "build": "gatsby build",
+    "start": "yarn develop",
+    "serve": "gatsby serve"
   },
   "dependencies": {
     "@shetharp/gatsby-theme-galleon": "*",

@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@shetharp/gatsby-starter-child-theme-workspace",
+  "name": "@shetharp/gatsby-theme-galleon-workspace",
   "author": "Arpit Sheth <arpit@arpitsheth.com> (@shetharp)",
   "version": "0.1.0",
   "main": "index.js",
