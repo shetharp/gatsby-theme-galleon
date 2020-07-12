@@ -1,21 +1,20 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-import { tint } from "@theme-ui/color";
 
 const code = {
   "[data-name='live-editor']": {
-    fontSize: "inherit",
+    fontSize: 1,
     "textarea, pre": {
       padding: (t: any) => `${t.space[3]} !important`,
     },
   },
   "[data-name='live-preview']": {
     padding: (t: any) => `calc(${t.space[2]} + 10px) !important`,
-    backgroundColor: tint(`primary`, 0.7),
+    backgroundColor: "fairWhite",
   },
   ".prism-code": {
     fontFamily: "monospace",
-    fontSize: "inherit",
+    fontSize: 0,
     padding: 3,
     webkitOverflowScrolling: `touch`,
     backgroundColor: `transparent`,
@@ -169,16 +168,13 @@ const code = {
     fontFamily: `monospace`,
     fontWeight: "bold",
     fontStyle: "italic",
-    backgroundColor: tint(`primary`, 0.7),
+    backgroundColor: "secondary",
     color: `black`,
-    fontSize: "inherit",
+    fontSize: 1,
     px: 3,
     py: 2,
   },
-  "[data-name='live-preview'], [data-name='live-editor']": {
-    mx: [0, 0, 0, -3],
-    fontSize: "inherit",
-  },
+  "[data-name='live-preview'], [data-name='live-editor']": {},
   ".token-line": {
     pr: 3,
   },

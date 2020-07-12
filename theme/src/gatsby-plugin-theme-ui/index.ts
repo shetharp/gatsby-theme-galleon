@@ -233,7 +233,7 @@ const styles: ThemeGalleon["styles"] = {
     overflow: "scroll",
     padding: 2,
   },
-  code: { fontFamily: "monospace", display: "inline-block", color: "secondary", border: "2px solid mediumslateblue" },
+  code: { fontFamily: "monospace", color: "secondary" },
   ol: { ...baseTextBlock, ...baseIndentBlock },
   ul: { ...baseTextBlock, ...baseIndentBlock },
   li: { marginY: borderWidths.md, paddingLeft: 1 },
