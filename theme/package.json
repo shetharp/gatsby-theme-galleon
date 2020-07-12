@@ -1,12 +1,13 @@
 {
   "name": "@shetharp/gatsby-theme-galleon",
   "author": "Arpit Sheth <arpit@arpitsheth.com> (@shetharp)",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "index.js",
   "license": "MIT",
+  "homepage": "https://shetharp.github.io/gatsby-theme-galleon/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-theme-workspace.git"
+    "url": "https://github.com/shetharp/gatsby-theme-galleon.git"
   },
   "keywords": [
     "gatsby",

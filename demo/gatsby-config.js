@@ -1,4 +1,6 @@
 module.exports = {
+  pathPrefix: "/gatsby-theme-galleon",
+
   // TODO - Update site metadata to reflect your site's info
   siteMetadata: {
     // Used for the title template on pages other than the index site

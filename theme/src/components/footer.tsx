@@ -27,7 +27,7 @@ const Footer = () => {
       <div>
         <Link
           aria-label="Link to the theme's GitHub repository"
-          href="https://github.com/shetharp/gatsby-theme-galleon-workspace"
+          href="https://github.com/shetharp/gatsby-theme-galleon"
         >
           Theme
         </Link>

@@ -5,6 +5,8 @@
 Galleon is a Gatsby theme built on top of [`@lekoarts/gatsby-theme-minimal-blog`](https://www.gatsbyjs.org/packages/@lekoarts/gatsby-theme-minimal-blog/).
 Use Galleon to quickly build a gorgeous developer blog with support for Typescript, MDX, syntax-highlighted code blocks, and tags.
 
+### [⚓️ View Demo Site →](https://shetharp.github.io/gatsby-theme-galleon/)
+
 # Install the Galleon Theme
 
 1. Add the theme as a dependency to your Gatsby site.
@@ -36,7 +38,7 @@ module.exports = {
 To start developing your own theme using this repo as a starting point:
 
 ```shell
-gatsby new gatsby-theme-custom https://github.com/shetharp/gatsby-theme-galleon-workspace
+gatsby new gatsby-theme-custom https://github.com/shetharp/gatsby-theme-galleon
 cd gatsby-theme-custom
 yarn
 yarn workspace demo develop
