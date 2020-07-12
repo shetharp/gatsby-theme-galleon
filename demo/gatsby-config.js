@@ -99,7 +99,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["DM Mono:400,400i,700,700i"],
+          families: ["DM+Mono:ital,wght@0,300;0,500;1,300;1,500"],
         },
       },
     },
