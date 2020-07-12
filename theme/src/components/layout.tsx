@@ -3,7 +3,6 @@
 import React from "react";
 import { Global } from "@emotion/core";
 import { Box, Container, jsx } from "theme-ui";
-import "typeface-ibm-plex-sans";
 import SEO from "./seo";
 import Header from "./header";
 import Footer from "./footer";
@@ -37,7 +36,7 @@ const Layout = ({ children, className = `` }: LayoutProps) => (
           color: theme.colors.background,
         },
         a: {
-          transition: `all 0.3s ease-in-out`,
+          transition: theme.transitions.default,
           color: `text`,
         },
       })}

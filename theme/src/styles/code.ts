@@ -4,7 +4,7 @@ import { tint } from "@theme-ui/color";
 
 const code = {
   "[data-name='live-editor']": {
-    fontSize: 1,
+    fontSize: "inherit",
     "textarea, pre": {
       padding: (t: any) => `${t.space[3]} !important`,
     },
@@ -14,7 +14,8 @@ const code = {
     backgroundColor: tint(`primary`, 0.7),
   },
   ".prism-code": {
-    fontSize: [1, 1, 2],
+    fontFamily: "monospace",
+    fontSize: "inherit",
     padding: 3,
     webkitOverflowScrolling: `touch`,
     backgroundColor: `transparent`,
@@ -32,20 +33,19 @@ const code = {
     display: `inline-block`,
   },
   "p > code, li > code": {
-    bg: `gray.2`,
-    color: `gray.8`,
+    bg: `neutral.1`,
+    color: `neutral.3`,
     px: 2,
     py: 1,
     borderRadius: `2px`,
   },
   ".gatsby-highlight": {
-    fontSize: [1, 1, 2],
+    fontSize: "inherit",
     position: `relative`,
     webkitOverflowScrolling: `touch`,
     bg: `rgb(1, 22, 39)`,
     overflow: `auto`,
-    borderRadius: `2px`,
-    mx: [0, 0, 0, -3],
+    borderRadius: "none",
     ".token-line": {
       mx: -3,
     },
@@ -166,17 +166,18 @@ const code = {
     position: `relative`,
   },
   ".code-title": {
+    fontFamily: `monospace`,
+    fontWeight: "bold",
+    fontStyle: "italic",
     backgroundColor: tint(`primary`, 0.7),
     color: `black`,
-    fontSize: 0,
+    fontSize: "inherit",
     px: 3,
     py: 2,
-    fontFamily: `monospace`,
-    mx: [0, 0, 0, -3],
   },
   "[data-name='live-preview'], [data-name='live-editor']": {
     mx: [0, 0, 0, -3],
-    fontSize: [1, 1, 2],
+    fontSize: "inherit",
   },
   ".token-line": {
     pr: 3,

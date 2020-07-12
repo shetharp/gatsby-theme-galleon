@@ -34,7 +34,7 @@ const Homepage = ({ posts }: PostsProps) => {
 
   return (
     <Layout>
-      <section sx={{ mb: [5, 6, 7], p: { fontSize: [1, 2, 3], mt: 2 } }}>
+      <section sx={{ mb: [10, null, null, null, 11], p: { fontSize: [2, null, 3, null, 4], mt: 2 } }}>
         <Hero />
       </section>
       <Title text="Latest Posts">
