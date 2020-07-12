@@ -4,17 +4,17 @@ module.exports = {
     // Used for the title template on pages other than the index site
     siteTitle: `Galleon`,
     // Default title of the page
-    siteTitleAlt: `Site Title Alt`,
+    siteTitleAlt: `Galleon @shetharp/gatsby-theme-galleon`,
     // Can be used for e.g. JSONLD
-    siteHeadline: `Site Headline`,
+    siteHeadline: `Galleon Gatsby Theme by Arpit Sheth`,
     // Will be used to generate absolute URLs for og:image etc.
     siteUrl: `https://arpitsheth.com`,
     // Used for SEO
-    siteDescription: `Site description`,
+    siteDescription: `Build a gorgeous developer blog with support for Typescript, MDX, syntax-highlighted code blocks, and tags. Galleon is a Gatsby theme built on top of @lekoarts/gatsby-theme-minimal-blog.`,
     // Will be set on the <html /> tag
     siteLanguage: `en`,
     // Used for og:image and must be placed inside the `static` folder
-    siteImage: `/banner.jpg`,
+    siteImage: `/banner.png`,
     // Twitter Handle
     author: `@shetharp`,
   },
@@ -28,16 +28,20 @@ module.exports = {
         // TODO - Update navigation items for your site
         navigation: [
           {
-            title: `Theme Preview`,
-            slug: `/theme-preview`,
-          },
-          {
             title: `Blog`,
             slug: `/blog`,
           },
           {
             title: `About`,
             slug: `/about`,
+          },
+          {
+            title: `Readme`,
+            slug: `/readme`,
+          },
+          {
+            title: `Theme Preview`,
+            slug: `/theme-preview`,
           },
           {
             title: `404`,
@@ -57,7 +61,7 @@ module.exports = {
           },
         ],
         feed: true,
-        feedTitle: "TODO Feed Title", // TODO - Update RSS feed title for your site
+        feedTitle: "Galleon", // TODO - Update RSS feed title for your site
       },
     },
     {
@@ -71,22 +75,17 @@ module.exports = {
       // TODO - Update manifest options for your site
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Manifest Name`,
-        short_name: `short-name`,
-        description: `Manifest description`,
+        name: `Galleon @shetharp/gatsby-theme-galleon`,
+        short_name: `galleon-theme`,
+        description: `Galleon Gatsby Theme by Arpit Sheth`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#6B46C1`,
         display: `standalone`,
         icons: [
           {
-            src: `/android-chrome-192x192.png`,
+            src: `/favicon.png`,
             sizes: `192x192`,
-            type: `image/png`,
-          },
-          {
-            src: `/android-chrome-512x512.png`,
-            sizes: `512x512`,
             type: `image/png`,
           },
         ],

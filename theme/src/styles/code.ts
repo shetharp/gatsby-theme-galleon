@@ -32,6 +32,7 @@ const code = {
     display: `inline-block`,
   },
   "p > code, li > code": {
+    fontFamily: "monospace",
     bg: `neutral.1`,
     color: `neutral.3`,
     px: 2,
